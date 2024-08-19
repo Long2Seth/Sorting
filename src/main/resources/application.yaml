@@ -1,0 +1,9 @@
+mongodb:
+  connection:
+    host: localhost
+    port: 27017
+    database: testWithMongoDB
+    user: test
+    password: test@123
+    authSource: admin
+    ssl: false
