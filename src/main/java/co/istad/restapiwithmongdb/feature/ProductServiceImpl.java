@@ -72,17 +72,12 @@ public class ProductServiceImpl implements ProductService {
         productRepository.save(product);
     }
 
-//    @Override
-//    public Page<Product> getAllProducts(int pageNumber, int pageSize) {
-//        PageRequest pageRequest = PageRequest.of(pageNumber, pageSize);
-//        return productRepository.findAll(pageRequest);
-//    }
-
-
     @Override
     public Page<Product> getAllProducts(int pageNumber, int pageSize) {
-        PageRequest pageRequest = PageRequest.of(pageNumber, pageSize, Sort.by(Sort.Direction.ASC, "name"));
+        PageRequest pageRequest = PageRequest.of(pageNumber, pageSize , Sort.by(Sort.Direction.ASC , "name"));
         return productRepository.findAll(pageRequest);
     }
+
+
 
 }

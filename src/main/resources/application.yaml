@@ -6,4 +6,3 @@ mongodb:
     user: test
     password: test@123
     authSource: admin
-    ssl: false

@@ -39,16 +39,16 @@ public class ProductController {
 
 
 
-//    @GetMapping
-//    public Page<Product> getAllProducts(@RequestParam( defaultValue = "0") int pageNumber,
-//                                        @RequestParam( defaultValue = "25") int pageSize){
-//        return productService.getAllProducts(pageNumber, pageSize);
-//    }
-
     @GetMapping
-    public Page<Product> filterById(@RequestParam( defaultValue = "0") int pageNumber,
+    public Page<Product> getAllProducts(@RequestParam( defaultValue = "0") int pageNumber,
                                         @RequestParam( defaultValue = "25") int pageSize){
         return productService.getAllProducts(pageNumber, pageSize);
     }
+
+//    @GetMapping
+//    public Page<Product> filterById(@RequestParam( defaultValue = "0") int pageNumber,
+//                                        @RequestParam( defaultValue = "25") int pageSize){
+//        return productService.getAllProducts(pageNumber, pageSize);
+//    }
 
 }
