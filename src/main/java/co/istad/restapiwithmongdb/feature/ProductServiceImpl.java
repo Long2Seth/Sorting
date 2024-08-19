@@ -74,7 +74,9 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public Page<Product> getAllProducts(int pageNumber, int pageSize) {
-        PageRequest pageRequest = PageRequest.of(pageNumber, pageSize , Sort.by(Sort.Direction.ASC , "name"));
+//        Sort sort = Sort.by(Sort.Order.asc("name"), Sort.Order.asc("id"));
+        Sort sort = Sort.by(Sort.Order.asc("name"));
+        PageRequest pageRequest = PageRequest.of(pageNumber, pageSize, sort);
         return productRepository.findAll(pageRequest);
     }
 
